@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum — GTA 6 Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<header class="top">
+  <div class="title-block">
+    <h1>Leonida Platinum</h1>
+    <p class="subtitle">Offline GTA 6 trophy guide and tracker for all 55 trophies</p>
+  </div>
+  <div class="progress" aria-label="Progress">
+    <div class="progress-line">
+      <span id="earned-count">0 / 55 earned</span>
+      <span id="earned-pct">0%</span>
+    </div>
+    <div class="bar"><div id="progress-fill" class="fill" style="width:0%"></div></div>
+    <div id="grade-counts" class="grade-counts">Platinum 0/1 · Gold 0/2 · Silver 0/6 · Bronze 0/46</div>
+  </div>
+</header>
+
+<section class="controls" aria-label="Controls">
+  <input id="search" type="search" placeholder="Search trophy names and descriptions…" autocomplete="off">
+  <div class="grade-row" role="group" aria-label="Filter by grade">
+    <button type="button" data-grade="all" class="grade-btn active">All</button>
+    <button type="button" data-grade="platinum" class="grade-btn">Platinum</button>
+    <button type="button" data-grade="gold" class="grade-btn">Gold</button>
+    <button type="button" data-grade="silver" class="grade-btn">Silver</button>
+    <button type="button" data-grade="bronze" class="grade-btn">Bronze</button>
+  </div>
+  <div class="filter-row">
+    <label>Show
+      <select id="state-filter">
+        <option value="all">all trophies</option>
+        <option value="earned">earned only</option>
+        <option value="unearned">not yet earned</option>
+      </select>
+    </label>
+    <label class="check"><input id="missable-only" type="checkbox"> Missable only</label>
+    <label class="check"><input id="spoiler-toggle" type="checkbox" checked> Hide story trophies until earned</label>
+  </div>
+  <div class="action-row">
+    <button type="button" id="export-btn">Export progress</button>
+    <button type="button" id="import-btn">Import progress</button>
+    <input id="import-file" type="file" accept="application/json,.json" hidden>
+    <button type="button" id="reset-btn">Reset</button>
+    <button type="button" id="roadmap-btn">Roadmap</button>
+  </div>
+  <p id="showing" class="showing">Showing 55 of 55 trophies</p>
+</section>
+
+<main>
+  <ul id="list" class="trophy-list"></ul>
+  <p id="empty-note" class="empty" hidden>No trophies match these filters.</p>
+
+  <section id="roadmap" class="roadmap" aria-label="Platinum roadmap">
+    <h2>The road to platinum</h2>
+    <p class="roadmap-intro">Six stages, in order. Click a stage to filter the list to its trophies.</p>
+    <ol id="roadmap-steps" class="steps"></ol>
+    <div class="missables">
+      <h3>Missables — check before you start</h3>
+      <p class="missables-note">These seven can be missed if you play past the moment they trigger. The flags are inferred from the trophy descriptions, not playtested — the game is not out yet.</p>
+      <ul id="missables-box" class="missable-list"></ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Guide text written for this page; trophy names, descriptions and grades are the official list. Sources: Exophase and PSNProfiles. Everything runs offline — no network requests, no accounts, progress stays in your browser.</p>
+</footer>
+</body>
+</html>
